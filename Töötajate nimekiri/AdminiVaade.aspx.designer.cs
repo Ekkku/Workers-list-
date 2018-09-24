@@ -10,7 +10,7 @@
 namespace Töötajate_nimekiri {
     
     
-    public partial class WebForm2 {
+    public partial class AdminiVaade {
         
         /// <summary>
         /// form1 control.

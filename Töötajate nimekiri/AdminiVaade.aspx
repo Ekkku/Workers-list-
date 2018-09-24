@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm2.aspx.cs" Inherits="Töötajate_nimekiri.WebForm2" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdminiVaade.aspx.cs" Inherits="Töötajate_nimekiri.AdminiVaade" %>
 
 <!DOCTYPE html>
 

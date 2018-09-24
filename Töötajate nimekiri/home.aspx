@@ -15,7 +15,7 @@
             <Columns>
                 <asp:BoundField HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id" />
                 <asp:BoundField DataField="Nimi" HeaderText="Nimi" SortExpression="Nimi" />
-                <asp:BoundField DataField="Sünnikuupäev" HeaderText="Sünnikuupäev" SortExpression="Sünnikuupäev" DataFormatString="{0:dd/MM}"/>
+                <asp:BoundField DataField="Sünnikuupäev"  HeaderText="Sünnikuupäev" SortExpression="Sünnikuupäev" DataFormatString="{0:dd/MM}"/>
                 <asp:BoundField DataField="Amet" HeaderText="Amet" SortExpression="Amet" />
                 <asp:BoundField DataField="Osakond" HeaderText="Osakond" SortExpression="Osakond" />
             </Columns>

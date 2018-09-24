@@ -10,7 +10,7 @@ using System.Data;
 namespace Töötajate_nimekiri
 {
     
-    public partial class WebForm2 : System.Web.UI.Page
+    public partial class AdminiVaade : System.Web.UI.Page
     {
         string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security = True";
         protected void Page_Load(object sender, EventArgs e)
@@ -28,9 +28,6 @@ namespace Töötajate_nimekiri
             {
                 sqlCon.Open();
                 SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM [workers]", sqlCon);
-                // TextBox.Text = mydate.ToString("dd/MM");
-                
-
                 sqlDa.Fill(dtbl);
             }
             if (dtbl.Rows.Count > 0)

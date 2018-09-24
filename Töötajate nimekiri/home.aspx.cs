@@ -25,7 +25,7 @@ namespace Töötajate_nimekiri
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            Response.Redirect("WebForm2.aspx");
+            Response.Redirect("AdminiVaade.aspx");
         }
 
         protected void ButtonOtsi_Click(object sender, EventArgs e)
