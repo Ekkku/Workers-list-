@@ -18,24 +18,32 @@ namespace Töötajate_nimekiri
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            try
+            if (string.IsNullOrWhiteSpace(TextBox1.Text))
             {
-                SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["dbconnect"].ConnectionString);
-                con.Open();
-                string insert = "insert into workers (Nimi, Sünnikuupäev, Amet, Osakond) values(@Nimi, @Sünnikuupäev, @Amet, @Osakond)";
-                SqlCommand cmd = new SqlCommand(insert, con);
-                cmd.Parameters.AddWithValue("@Nimi", TextBox1.Text);
-                cmd.Parameters.AddWithValue("@Sünnikuupäev", TextBox2.Text);
-                cmd.Parameters.AddWithValue("@Amet", TextBox3.Text);
-                cmd.Parameters.AddWithValue("@Osakond", TextBox4.Text);
-                cmd.ExecuteNonQuery();
                 Response.Redirect("home.aspx");
-                con.Close();
             }
-            catch (Exception ex)
+            else
             {
-                Response.Write(ex);
+                try
+                {
+                    SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["dbconnect"].ConnectionString);
+                    con.Open();
+                    string insert = "insert into workers (Nimi, Sünnikuupäev, Amet, Osakond) values(@Nimi, @Sünnikuupäev, @Amet, @Osakond)";
+                    SqlCommand cmd = new SqlCommand(insert, con);
+                    cmd.Parameters.AddWithValue("@Nimi", TextBox1.Text);
+                    cmd.Parameters.AddWithValue("@Sünnikuupäev", TextBox2.Text);
+                    cmd.Parameters.AddWithValue("@Amet", TextBox3.Text);
+                    cmd.Parameters.AddWithValue("@Osakond", TextBox4.Text);
+                    cmd.ExecuteNonQuery();
+                    Response.Redirect("home.aspx");
+                    con.Close();
+                }
+                catch (Exception ex)
+                {
+                    Response.Write(ex);
+                }
             }
+                
         }
     }
 }

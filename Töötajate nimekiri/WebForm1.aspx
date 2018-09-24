@@ -9,12 +9,14 @@
 <body>
     <form id="form1" runat="server">
         <div>
+            <asp:Label ID="Label5" runat="server" Text="Sisestage töötaja andmed. Kui liigute järgmisele lehele kõiki aknaid täitmata, ei looda uut töötaja profiili."></asp:Label>
+            <br />
         </div>
         <asp:Label ID="Label1" runat="server" Text="Nimi"></asp:Label>
         <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
         <p>
             <asp:Label ID="Label3" runat="server" Text="Sünnikuupäev"></asp:Label>
-            <asp:TextBox ID="TextBox2" placeholder="00/00/00" runat="server"></asp:TextBox>
+            <asp:TextBox ID="TextBox2" placeholder="mm/dd/yyyy" runat="server"></asp:TextBox>
         </p>
         <asp:Label ID="Label2" runat="server" Text="Amet"></asp:Label>
         <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
@@ -25,7 +27,7 @@
         <p>
             &nbsp;</p>
         <p>
-            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Button" />
+            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Lisa nimekirja" />
         </p>
     </form>
 </body>
